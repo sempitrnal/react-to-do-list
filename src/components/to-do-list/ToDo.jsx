@@ -36,7 +36,11 @@ export default function ToDo({ todo, toDos, setTodos, id, isDone, color }) {
         : "",
   };
   const deleteTodo = () => {
-    setTodos((prev) => prev.filter((e) => e.id !== id));
+    setTodos((prev) => {
+      const arr = prev.filter((e) => e.id !== id);
+      localStorage.setItem("todos", JSON.stringify(arr));
+      return arr;
+    });
   };
   const done = () => {
     let newArr = [];
@@ -53,7 +57,7 @@ export default function ToDo({ todo, toDos, setTodos, id, isDone, color }) {
   return (
     <motion.div
       layout
-      exit={{ opacity: 0, x: "-1000px" }}
+      exit={{ opacity: 0, x: "-100px" }}
       transition={{ duration: 0.3 }}
       style={active}
       className={`flex gap-5 dark:text-white  p-5 rounded-md shadow-md dark:shadow-none w-[40rem]  justify-between max-w-[40rem ] `}

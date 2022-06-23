@@ -39,3 +39,9 @@ input:valid {
 .dark input:focus ~ label {
   background-color: #1a1a1a;
 }
+.dark input:valid ~ label {
+  background-color: #1a1a1a;
+}
+.dark input:valid {
+  background-color: #1a1a1a;
+}

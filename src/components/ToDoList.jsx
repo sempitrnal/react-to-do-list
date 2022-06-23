@@ -8,7 +8,9 @@ import { AnimatePresence } from "framer-motion";
 import ColorWrapper from "./to-do-list/ColorWrapper";
 
 function ToDoList() {
-  const [toDos, setTodos] = useState([]);
+  const [toDos, setTodos] = useState(
+    () => JSON.parse(localStorage.getItem("todos")) || []
+  );
   const [color, setColor] = useState([
     "yellow",
     "red",
@@ -23,7 +25,7 @@ function ToDoList() {
       <Wrapper>
         <ColorWrapper color={color} setColor={setColor} />
         <Header />
-        <AddToDo setTodos={setTodos} color={color} />
+        <AddToDo setTodos={setTodos} color={color} toDos={toDos} />
         <AnimatePresence>
           <List toDos={toDos} setTodos={setTodos} color={color} />
         </AnimatePresence>

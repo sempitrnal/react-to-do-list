@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosAddCircle } from "react-icons/io";
 
-export default function AddToDo({ setTodos, color }) {
+export default function AddToDo({ setTodos, color, toDos }) {
   const [input, setInput] = useState("");
   const [isValid, setIsValid] = useState(true);
 
@@ -12,10 +12,12 @@ export default function AddToDo({ setTodos, color }) {
     if (input) {
       setIsValid(true);
       setTodos((prev) => {
-        return [
+        const arr = [
           { todo: input, id: nanoid(), isDone: false, color: color },
           ...prev,
         ];
+        localStorage.setItem("todos", JSON.stringify(arr));
+        return arr;
       });
     } else setIsValid(false);
     setInput("");
@@ -45,13 +47,13 @@ export default function AddToDo({ setTodos, color }) {
             id="to-do"
             value={input}
             onChange={handleChange}
-            className={`h-[2rem] transition-all bg-[#f5f5f5] dark:bg-[#292929]  dark:text-white focus:outline focus:outline-1  duration-300 shadow-sm  outline-[#a4a4a431] focus:outline-[#333] dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 ${
+            className={`h-[2rem] transition-all bg-[#f5f5f5] dark:bg-[#292929]  dark:text-white focus:outline focus:outline-1  duration-300 shadow-sm  outline-[#a4a4a431] focus:outline-[#333] dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 w-[25rem] ${
               isValid ? "" : "outline-red-400 relative"
             }`}
           />
           <label
             htmlFor="to-do"
-            className="absolute left-7 top-3 text-gray-400 font-thin dark:bg-[#292929] dark:text-white "
+            className="absolute left-7 top-3 text-gray-400 font-thin rounded-md dark:text-white "
           >
             What to do today?
           </label>
