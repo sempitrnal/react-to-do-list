@@ -38,15 +38,24 @@ export default function AddToDo({ setTodos, color }) {
         )}
       </AnimatePresence>
       <form onSubmit={addTodo} className="flex gap-3">
-        <input
-          type="text"
-          value={input}
-          onChange={handleChange}
-          placeholder="What to do today?"
-          className={`h-[2rem] transition-all  duration-300 shadow-sm outline outline-1 outline-[#a4a4a431] focus:outline-[#333] rounded-lg py-6 px-7 ${
-            isValid ? "" : "outline-red-400"
-          }`}
-        />
+        <div className="relative">
+          <input
+            required
+            type="text"
+            id="to-do"
+            value={input}
+            onChange={handleChange}
+            className={`h-[2rem] transition-all bg-[#f5f5f5] dark:bg-[#292929]  dark:text-white focus:outline focus:outline-1  duration-300 shadow-sm  outline-[#a4a4a431] focus:outline-[#333] dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 ${
+              isValid ? "" : "outline-red-400 relative"
+            }`}
+          />
+          <label
+            htmlFor="to-do"
+            className="absolute left-7 top-3 text-gray-400 font-thin dark:bg-[#292929] dark:text-white "
+          >
+            What to do today?
+          </label>
+        </div>
         <button className="dark:text-white text-3xl transition duration-300 hover:text-gray-600">
           <IoIosAddCircle />
         </button>

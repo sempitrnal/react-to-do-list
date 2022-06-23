@@ -9,6 +9,24 @@ export default function ColorWrapper({ color, setColor }) {
   const toggle = () => {
     setShow(!show);
   };
+  const active = {
+    backgroundColor:
+      color[0] === "yellow"
+        ? "#efb93b"
+        : color[0] === "red"
+        ? "#e46f6f"
+        : color[0] === "blue"
+        ? "#5e9fe0"
+        : color[0] === "gray"
+        ? "#9e9e9e"
+        : color[0] === "green"
+        ? "#3f5e32"
+        : color[0] === "pink"
+        ? "#dd7cad"
+        : color[0] === "purple"
+        ? "#a45dca"
+        : "",
+  };
   return (
     <motion.div className="absolute bottom-5 left-5 ">
       <AnimatePresence>
@@ -21,7 +39,7 @@ export default function ColorWrapper({ color, setColor }) {
             className="flex gap-3 items-center cursor-pointer"
             onClick={toggle}
           >
-            <div className={`w-8 h-8 rounded-[50%] bg-${color[0]}-400`}></div>
+            <div className={`w-8 h-8 rounded-[50%]`} style={active}></div>
             <p className="dark:text-white transition duration-300 text-xs">
               {color[0]}
             </p>

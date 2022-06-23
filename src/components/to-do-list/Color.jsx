@@ -14,6 +14,24 @@ export default function Color({
     newColor.unshift(color);
     setColor(newColor);
   };
+  const active = {
+    backgroundColor:
+      color === "yellow"
+        ? "#efb93b"
+        : color === "red"
+        ? "#e46f6f"
+        : color === "blue"
+        ? "#5e9fe0"
+        : color === "gray"
+        ? "#9e9e9e"
+        : color === "green"
+        ? "#3f5e32"
+        : color === "pink"
+        ? "#dd7cad"
+        : color === "purple"
+        ? "#a45dca"
+        : "",
+  };
   return (
     <motion.div
       whileHover={{ scale: 1.3 }}
@@ -25,7 +43,8 @@ export default function Color({
         damping: 30,
         stiffness: 300,
       }}
-      className={`w-8 h-8 rounded-[50%] bg-${color}-400  cursor-pointer`}
+      className={`w-8 h-8 rounded-[50%]  cursor-pointer`}
+      style={active}
       onClick={
         index !== 0
           ? () => {

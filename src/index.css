@@ -10,6 +10,32 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas,
-    "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+label {
+  transition: all 100ms ease-in-out;
+}
+input:focus ~ label {
+  top: -10px;
+  left: 10px;
+  background-color: white;
+  padding: 0 10px;
+  font-size: 0.8rem;
+}
+input:valid ~ label {
+  top: -10px;
+  left: 10px;
+  background-color: white;
+  padding: 0 10px;
+  font-size: 0.8rem;
+  color: rgb(67, 67, 67);
+}
+input:valid {
+  background-color: white;
+  outline: 1px solid gray;
+}
+
+.dark input:focus ~ label {
+  background-color: #1a1a1a;
 }
