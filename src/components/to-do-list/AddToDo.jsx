@@ -49,6 +49,7 @@ export default function AddToDo({ setTodos, color, toDos }) {
             type="text"
             id="to-do"
             value={input}
+            style={{ borderRadius: "20px" }}
             onChange={handleChange}
             className={`h-[2rem] transition-all bg-[#f5f5f5] dark:bg-[#292929]  dark:text-white focus:outline focus:outline-1  duration-300 shadow-sm  outline-[#a4a4a431] focus:outline-[#333] dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 w-full ${
               isValid ? "" : "outline-red-400 relative "
