@@ -41,12 +41,8 @@ export default function AddToDo({ setTodos, color, toDos }) {
       </AnimatePresence>
       <form
         onSubmit={addTodo}
-        className="flex flex-col gap-3 w-full  justify-center items-center"
+        className="flex w-full  justify-center items-center"
       >
-        <input
-          type="text"
-          className=" p-3 rounded-md w-[10rem] h-[2rem] border border-[#293264] outline-none focus:border-[#8d74e4] transition-all duration-300"
-        />
         <div className="relative mx-7">
           <input
             required
@@ -54,9 +50,9 @@ export default function AddToDo({ setTodos, color, toDos }) {
             id="to-do"
             value={input}
             onChange={handleChange}
-            className={`h-[2rem] transition-all bg-[#f5f5f5] dark:bg-[#292929]  dark:text-white focus:outline focus:outline-1  duration-300 shadow-sm  outline-[#a4a4a431] focus:outline-[#333] dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 w-full ${
+            className={`h-[2rem] transition-all bg-[#f5f5f5] dark:bg-[#292929]  dark:text-white duration-300 shadow-sm   dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 w-full ${
               isValid ? "" : "outline-red-400 relative "
-            } focus:rounded-lg`}
+            } `}
           />
           <label
             htmlFor="to-do"
