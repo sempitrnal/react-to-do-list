@@ -45,7 +45,7 @@ export default function AddToDo({ setTodos, color, toDos }) {
       >
         <input
           type="text"
-          className=" w-64 h-10 rounded-lg p-3 outline-none "
+          className=" p-3 rounded-md w-[10rem] h-[2rem] border border-[#293264] outline-none focus:border-[#8d74e4] transition-all duration-300"
         />
         <div className="relative mx-7">
           <input
