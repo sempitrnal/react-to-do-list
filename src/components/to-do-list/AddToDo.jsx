@@ -43,7 +43,10 @@ export default function AddToDo({ setTodos, color, toDos }) {
         onSubmit={addTodo}
         className="flex flex-col gap-3 w-full  justify-center items-center"
       >
-        <input type="text" className=" w-64 h-10 rounded-lg p-3" />
+        <input
+          type="text"
+          className=" w-64 h-10 rounded-lg p-3 outline-none "
+        />
         <div className="relative mx-7">
           <input
             required
