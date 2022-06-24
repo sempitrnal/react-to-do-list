@@ -39,8 +39,11 @@ export default function ColorWrapper({ color, setColor }) {
             className="flex gap-3 items-center cursor-pointer"
             onClick={toggle}
           >
-            <div className={`w-8 h-8 rounded-[50%]`} style={active}></div>
-            <p className="dark:text-white transition duration-300 text-xs">
+            <div
+              className={`w-4 h-4 md:w-8 md:h-8 rounded-[50%]`}
+              style={active}
+            ></div>
+            <p className="dark:text-white transition duration-300 text-[.5rem] md:text-xs">
               {color[0]}
             </p>
           </motion.div>
@@ -74,7 +77,7 @@ export default function ColorWrapper({ color, setColor }) {
                 stiffness: 300,
                 duration: 0.3,
               }}
-              className="text-sm dark:text-[#cecece] cursor-pointer bg-[#6b6b6b32] rounded-[50%] h-8 w-8 flex justify-center items-center "
+              className="text-[.5rem] md:text-sm dark:text-[#cecece] cursor-pointer bg-[#6b6b6b32] rounded-[50%] w-4 h-4 md:w-8 md:h-8 flex justify-center items-center "
             >
               <GrClose />
             </motion.p>

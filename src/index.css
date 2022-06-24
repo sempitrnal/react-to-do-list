@@ -33,6 +33,7 @@ input:valid ~ label {
 }
 input:valid {
   background-color: white;
+  border: 1px solid #292929;
 }
 
 .dark input:focus ~ label {
@@ -43,6 +44,7 @@ input:valid {
 }
 .dark input:valid {
   background-color: #1a1a1a;
+  border: 1px solid #7a7a7a;
 }
 .container {
   -ms-overflow-style: none; /* Internet Explorer 10+ */

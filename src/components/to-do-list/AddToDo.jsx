@@ -50,7 +50,10 @@ export default function AddToDo({ setTodos, color, toDos }) {
             id="to-do"
             value={input}
             onChange={handleChange}
-            className={`h-[2rem] transition-all bg-[#f5f5f5]  dark:bg-[#292929] border  dark:text-white duration-300 shadow-sm dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 w-full ring-0 outline-none
+            className={`h-[2rem] rounded-lg py-6 px-7 w-full  outline-none 
+             bg-[#f5f5f5]  dark:bg-[#292929]  dark:focus:bg-dark focus:bg-white  
+             border border-[#f5f5f5] focus:border-[#292929] dark:border-[#292929] dark:focus:border-[#7a7a7a]
+             dark:text-white transition-all duration-300 shadow-sm dark:shadow-none
               `}
           />
           <label

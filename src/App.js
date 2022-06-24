@@ -4,7 +4,9 @@ import ToDoList from "./components/ToDoList";
 function App() {
   return (
     <div className="App ">
-      <DarkModeButton />
+      <div className="absolute left-4 bottom-4 hidden md:block">
+        <DarkModeButton />
+      </div>
       <ToDoList />
     </div>
   );

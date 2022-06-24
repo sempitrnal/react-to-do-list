@@ -43,7 +43,7 @@ export default function Color({
         damping: 30,
         stiffness: 300,
       }}
-      className={`w-8 h-8 rounded-[50%]  cursor-pointer`}
+      className={`w-4 h-4 md:w-8 md:h-8 rounded-[50%]  cursor-pointer`}
       style={active}
       onClick={
         index !== 0

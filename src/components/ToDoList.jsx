@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import List from "./to-do-list/List";
 import { AnimatePresence } from "framer-motion";
 import ColorWrapper from "./to-do-list/ColorWrapper";
+import DarkModeButton from "./DarkModeButton";
 
 function ToDoList() {
   const [toDos, setTodos] = useState(
@@ -23,6 +24,9 @@ function ToDoList() {
   return (
     <Background>
       <Wrapper>
+        <div className="absolute right-4 top-[-12px] md:hidden">
+          <DarkModeButton />
+        </div>
         <ColorWrapper color={color} setColor={setColor} />
         <Header />
         <AddToDo setTodos={setTodos} color={color} toDos={toDos} />
