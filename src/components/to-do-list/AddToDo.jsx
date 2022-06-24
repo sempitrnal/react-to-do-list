@@ -50,9 +50,8 @@ export default function AddToDo({ setTodos, color, toDos }) {
             id="to-do"
             value={input}
             onChange={handleChange}
-            className={`h-[2rem] transition-all bg-[#f5f5f5] dark:bg-[#292929]  dark:text-white duration-300 shadow-sm   dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 w-full ${
-              isValid ? "" : "outline-red-400 relative "
-            } `}
+            className={`h-[2rem] transition-all bg-[#f5f5f5]  dark:bg-[#292929] border  dark:text-white duration-300 shadow-sm   dark:focus:bg-dark focus:bg-white rounded-lg py-6 px-7 w-full 
+              `}
           />
           <label
             htmlFor="to-do"

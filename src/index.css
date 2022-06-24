@@ -33,7 +33,6 @@ input:valid ~ label {
 }
 input:valid {
   background-color: white;
-  border: 2px solid rgb(0, 0, 0);
 }
 
 .dark input:focus ~ label {
