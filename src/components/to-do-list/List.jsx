@@ -20,7 +20,7 @@ export default function List({ toDos, setTodos, color }) {
   return (
     <motion.div
       exit={{ opacity: 0 }}
-      className="w-[80%] h-[60%]  flex flex-col items-center overflow-y-auto overflow-x-hidden"
+      className="w-[100%] h-[60%]  flex flex-col items-center overflow-y-auto"
     >
       <motion.div layout className="mt-5 flex flex-col gap-5 w-full">
         <AnimatePresence>{toDoElements}</AnimatePresence>
